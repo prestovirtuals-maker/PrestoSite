@@ -90,7 +90,7 @@ p { margin: 0 0 1em; }
   font-size: .85rem; font-weight: 700; color: var(--navy); display: flex; align-items: center; gap: .5rem;
 }
 .hero-badge i { width: 10px; height: 10px; border-radius: 50%; background: var(--blue); display: block; }
-.hero-badge.b1 { left: 0; bottom: 14%; }
+.hero-badge.b1 { left: 0; bottom: 2%; }
 .hero-badge.b2 { right: 0; top: 10%; }
 
 /* Sections */
