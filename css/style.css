@@ -84,7 +84,7 @@ p { margin: 0 0 1em; }
 .hero .lead { font-size: 1.2rem; color: var(--muted); max-width: 34em; margin-bottom: 2rem; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: .9rem; }
 .hero-art { position: relative; display: grid; place-items: center; }
-.hero-art img { position: relative; width: min(380px, 90%); height: auto; }
+.hero-art img { position: relative; width: min(400px, 90%); height: auto; }
 .hero-badge {
   position: absolute; background: #fff; border-radius: 14px; padding: .7rem 1rem; box-shadow: var(--shadow);
   font-size: .85rem; font-weight: 700; color: var(--navy); display: flex; align-items: center; gap: .5rem;
@@ -110,6 +110,16 @@ section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
   display: grid; place-items: center; color: var(--blue); margin-bottom: 1.1rem;
 }
 .card p { color: var(--muted); margin: 0; font-size: .98rem; }
+
+/* Service blocks */
+.svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; align-items: stretch; }
+.card.svc { padding: 2rem; display: flex; flex-direction: column; }
+.card.svc p { margin-bottom: 1.2rem; }
+.card.svc .icon { width: 56px; height: 56px; }
+.checks { list-style: none; margin: 0; padding: 1.2rem 0 0; border-top: 1px solid rgba(10, 20, 80, .08); display: grid; gap: .65rem; }
+.checks li { display: flex; gap: .65rem; align-items: flex-start; font-size: .96rem; color: var(--ink); line-height: 1.45; }
+.checks svg { flex: none; margin-top: 2px; color: var(--blue); }
+.svc-note { margin: 2.2rem 0 0; text-align: center; color: var(--muted); font-size: 1.05rem; }
 
 /* Steps */
 .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; counter-reset: s; }
@@ -168,6 +178,7 @@ footer a { color: #cfd8ff; }
   .hero-grid, .about-grid, .contact-box { grid-template-columns: 1fr; }
   .hero-art { order: -1; max-width: 340px; margin: 0 auto; }
   .cards { grid-template-columns: 1fr 1fr; }
+  .svc-grid { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr; gap: 1.4rem; }
 }
 @media (max-width: 760px) {
