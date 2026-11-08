@@ -121,6 +121,16 @@ section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
 .checks svg { flex: none; margin-top: 2px; color: var(--blue); }
 .svc-note { margin: 2.2rem 0 0; text-align: center; color: var(--muted); font-size: 1.05rem; }
 
+/* FAQ */
+.faq-wrap { max-width: 820px; }
+.faq-list { display: grid; gap: .8rem; }
+.faq-item { background: #fff; border: 1px solid rgba(10, 20, 80, .08); border-radius: 14px; padding: 0 1.4rem; box-shadow: var(--shadow); }
+.faq-item summary { cursor: pointer; list-style: none; padding: 1.15rem 0; font-weight: 700; color: var(--navy); display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "+"; font-size: 1.5rem; line-height: 1; color: var(--blue); transition: transform .2s ease; }
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item p { margin: 0 0 1.2rem; color: var(--muted); }
+
 /* Steps */
 .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; counter-reset: s; }
 .step { position: relative; padding-top: 4.2rem; }
