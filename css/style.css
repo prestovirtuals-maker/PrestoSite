@@ -48,7 +48,7 @@ p { margin: 0 0 1em; }
 }
 .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 1rem; }
 .brand { display: flex; align-items: center; gap: .75rem; text-decoration: none; color: var(--navy); }
-.brand img { width: 46px; height: 46px; }
+.brand img { width: auto; height: 46px; }
 .brand-text { display: flex; flex-direction: column; line-height: 1.15; }
 .brand-text strong { font-family: var(--font-display); font-size: 1.3rem; letter-spacing: -.01em; }
 .brand-text span { font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
@@ -84,7 +84,7 @@ p { margin: 0 0 1em; }
 .hero .lead { font-size: 1.2rem; color: var(--muted); max-width: 34em; margin-bottom: 2rem; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: .9rem; }
 .hero-art { position: relative; display: grid; place-items: center; }
-.hero-art img { position: relative; width: min(420px, 90%); filter: drop-shadow(0 24px 40px rgba(10, 20, 80, .14)); }
+.hero-art img { position: relative; width: min(380px, 90%); height: auto; }
 .hero-badge {
   position: absolute; background: #fff; border-radius: 14px; padding: .7rem 1rem; box-shadow: var(--shadow);
   font-size: .85rem; font-weight: 700; color: var(--navy); display: flex; align-items: center; gap: .5rem;
