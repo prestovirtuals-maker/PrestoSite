@@ -85,15 +85,14 @@ p { margin: 0 0 1em; }
 .hero h1 em { font-style: italic; color: var(--blue); font-weight: 500; }
 .hero .lead { font-size: 1.2rem; color: var(--muted); max-width: 34em; margin-bottom: 2rem; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: .9rem; }
-.hero-art { position: relative; display: grid; place-items: center; }
+.hero-art { position: relative; display: flex; flex-direction: column; align-items: center; gap: 1.6rem; }
 .hero-art img { position: relative; width: min(400px, 90%); height: auto; }
+.hero-art .hero-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: .8rem; }
 .hero-badge {
-  position: absolute; background: #fff; border-radius: 14px; padding: .7rem 1rem; box-shadow: var(--shadow);
+  background: #fff; border-radius: 14px; padding: .7rem 1rem; box-shadow: var(--shadow);
   font-size: .85rem; font-weight: 700; color: var(--navy); display: flex; align-items: center; gap: .5rem;
 }
 .hero-badge i { width: 10px; height: 10px; border-radius: 50%; background: var(--blue); display: block; }
-.hero-badge.b1 { left: 0; bottom: 2%; }
-.hero-badge.b2 { right: 0; top: 10%; }
 
 /* Sections */
 section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
