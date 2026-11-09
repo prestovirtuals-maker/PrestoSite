@@ -1,4 +1,5 @@
 :root {
+  --gold: #e0b95a;
   --navy: #0a1450;
   --blue: #0044aa;
   --blue-dark: #00338a;
@@ -208,4 +209,68 @@ footer a { color: #cfd8ff; }
 @media (max-width: 560px) {
   .cards { grid-template-columns: 1fr; }
   .hero-badge { display: none; }
+}
+
+
+/* ===== Sale promo bar ===== */
+.promo-bar { background: #070b26; color: #f4e7c1; font-size: .92rem; position: relative; }
+.promo-bar[hidden] { display: none; }
+.promo-inner { display: flex; justify-content: center; align-items: center; gap: .5rem 1rem; padding: .6rem 2.6rem; flex-wrap: wrap; text-align: center; }
+.promo-inner p { margin: 0; }
+.promo-inner strong { color: var(--gold); }
+.promo-count { opacity: .8; }
+.promo-link { background: var(--gold); color: #1a1405; font-weight: 800; text-decoration: none; padding: .28rem .95rem; border-radius: 999px; font-size: .85rem; white-space: nowrap; }
+.promo-link:hover { background: #f2d27f; }
+.promo-close { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: none; border: 0; color: #f4e7c1; font-size: 1.5rem; line-height: 1; cursor: pointer; padding: .35rem .65rem; opacity: .75; }
+.promo-close:hover { opacity: 1; }
+@media (max-width: 560px) { .promo-count { display: none; } .promo-bar { font-size: .86rem; } }
+
+/* ===== Sale page ===== */
+.btn-gold { background: var(--gold); color: #1a1405; box-shadow: 0 8px 22px rgba(224, 185, 90, .28); }
+.btn-gold:hover { background: #f2d27f; }
+.btn-ghost-light { border-color: rgba(255, 255, 255, .6); color: #fff; background: transparent; }
+.btn-ghost-light:hover { background: #fff; color: var(--navy); }
+.sale-hero {
+  background: radial-gradient(900px 420px at 75% -10%, #1d2f8a 0%, transparent 60%), linear-gradient(180deg, #0a1450, #060a2b);
+  color: #dfe6ff; text-align: center; padding: clamp(3.5rem, 8vw, 6rem) 0 clamp(3rem, 7vw, 5rem);
+}
+.sale-hero h1 { color: #fff; margin-inline: auto; max-width: 15em; }
+.sale-hero h1 em { font-style: italic; color: var(--gold); font-weight: 500; }
+.sale-hero .lead { font-size: 1.2rem; max-width: 36em; margin: 0 auto 1.6rem; color: #c3cffa; }
+.pill { display: inline-block; border: 1px solid rgba(224, 185, 90, .55); color: var(--gold); padding: .38rem 1rem; border-radius: 999px; font-weight: 700; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 1.4rem; }
+.countdown { display: flex; justify-content: center; gap: .8rem; margin: 1.8rem 0 2rem; }
+.cd-box { min-width: 78px; background: rgba(255, 255, 255, .07); border: 1px solid rgba(224, 185, 90, .35); border-radius: 14px; padding: .85rem .5rem .7rem; }
+.cd-box b { display: block; font-family: var(--font-display); font-size: 2.1rem; color: #fff; line-height: 1; font-variant-numeric: tabular-nums; }
+.cd-box span { font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: #9fb0ee; }
+.sale-hero .hero-actions { justify-content: center; }
+.fine { font-size: .9rem; color: #9fb0ee; margin: 1.4rem 0 0; }
+
+.offer-strip { background: var(--gold); color: #1a1405; text-align: center; padding: 1.3rem 0; }
+.offer-strip p { margin: 0; font-family: var(--font-display); font-size: clamp(1.3rem, 3vw, 1.9rem); font-weight: 600; }
+.offer-strip strong { font-weight: 700; }
+
+.bank-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; max-width: 960px; margin-inline: auto; }
+.bank { position: relative; padding: 2.2rem; display: flex; flex-direction: column; }
+.bank .save { position: absolute; top: 1.3rem; right: 1.3rem; background: var(--gold); color: #1a1405; font-weight: 800; font-size: .78rem; padding: .32rem .75rem; border-radius: 999px; }
+.bank h3 { font-size: 1.6rem; margin-top: .3rem; }
+.bank .hrs { color: var(--muted); margin: 0 0 1rem; font-weight: 600; }
+.bank .price { font-family: var(--font-display); font-size: 3.2rem; color: var(--navy); line-height: 1; margin: 0; }
+.bank .was { color: var(--muted); margin: .4rem 0 1.4rem; }
+.bank .was s { opacity: .8; }
+.bank .checks { margin-bottom: 1.6rem; }
+.bank .btn { margin-top: auto; }
+.bank-note { text-align: center; color: var(--muted); margin: 2rem auto 0; max-width: 40rem; }
+
+.center-head { text-align: center; margin-inline: auto; }
+.cta-final { text-align: center; }
+.cta-final .contact-box { grid-template-columns: 1fr; }
+.cta-final h2 { max-width: 16em; margin-inline: auto; }
+.cta-final .hero-actions { justify-content: center; }
+.sale-ended { display: none; text-align: center; background: #fff3d6; color: #5a4300; padding: 1rem; font-weight: 700; }
+.sale-over .sale-ended { display: block; }
+.sale-over .countdown, .sale-over .sale-live { display: none; }
+@media (max-width: 760px) {
+  .bank-grid { grid-template-columns: 1fr; }
+  .cd-box { min-width: 64px; }
+  .cd-box b { font-size: 1.7rem; }
 }
