@@ -132,12 +132,6 @@ section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
 .card.svc.featured .checks li { color: #fff; }
 .card.svc.featured .checks svg { color: var(--gold); }
 .card.svc.featured .btn { margin-top: auto; }
-.card.addon { padding: 1.6rem 1.8rem; background: rgba(255, 255, 255, .7); border-style: dashed; border-color: rgba(10, 20, 80, .22); box-shadow: none; }
-.card.addon:hover { box-shadow: var(--shadow); }
-.addon-tag { display: inline-block; font-size: .72rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--blue); margin-bottom: .5rem; }
-.card.addon h3 { font-size: 1.15rem; margin-bottom: .9rem; }
-.card.addon .checks { padding-top: 0; border-top: 0; }
-.card.addon .checks svg { color: var(--blue); }
 .svc-note { margin: 2.2rem 0 0; text-align: center; color: var(--muted); font-size: 1.05rem; }
 
 /* FAQ */
@@ -352,3 +346,14 @@ footer a { color: #cfd8ff; }
 .card-link { display: inline-block; margin-top: 1.2rem; font-weight: 700; color: var(--blue); text-decoration: none; }
 .card-link:hover { text-decoration: underline; }
 @media (max-width: 760px) { .pkg-grid { grid-template-columns: 1fr; } .card.pkg { padding: 1.8rem; } }
+
+
+/* ===== Add-ons blocks (stand-out outline) ===== */
+.card.addon { position: relative; background: #fff; border: 2.5px solid var(--navy); border-radius: var(--radius); padding: 2.1rem 1.8rem 1.6rem; box-shadow: 6px 6px 0 rgba(10, 20, 80, .14); margin-top: .6rem; }
+.card.addon:hover { transform: translateY(-2px); box-shadow: 8px 8px 0 rgba(10, 20, 80, .18); }
+.addon-tag { position: absolute; top: -.95rem; left: 1.4rem; display: inline-flex; align-items: center; gap: .4rem; background: var(--navy); color: #fff; font-size: .82rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; padding: .38rem .95rem; border-radius: 999px; }
+.addon-tag::before { content: "+"; font-size: 1.15rem; line-height: 1; font-weight: 800; color: var(--gold); }
+.card.addon h3 { font-size: 1.2rem; margin: 0 0 1rem; color: var(--navy); }
+.card.addon .checks { padding-top: 0; border-top: 0; }
+.card.addon .checks svg { color: var(--navy); stroke-width: 3; }
+@media (prefers-reduced-motion: reduce) { .card.addon:hover { transform: none; } }
