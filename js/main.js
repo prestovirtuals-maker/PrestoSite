@@ -39,8 +39,11 @@
     if (!end) return;
     var left = end - Date.now();
     var over = left <= 0;
-    document.documentElement.classList.toggle('sale-over', over);
-    if (over) { if (bar) bar.hidden = true; return; }
+    if (over) {
+      if (bar) bar.hidden = true;
+      ['d', 'h', 'm', 's'].forEach(function (k) { var el = document.querySelector('[data-cd="' + k + '"]'); if (el) el.textContent = k === 'd' ? '0' : '00'; });
+      return;
+    }
     var d = Math.floor(left / 864e5), h = Math.floor(left % 864e5 / 36e5),
         m = Math.floor(left % 36e5 / 6e4), s = Math.floor(left % 6e4 / 1e3);
     var pc = document.getElementById('promo-count');
