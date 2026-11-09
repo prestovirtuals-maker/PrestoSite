@@ -12,6 +12,7 @@ DirectoryIndex index.html
 # Hide the .git folder and repo files from the web
 RedirectMatch 404 /\.git
 RedirectMatch 404 ^/README\.md$
+RedirectMatch 404 ^/google-apps-script
 
 # Compression
 <IfModule mod_deflate.c>
