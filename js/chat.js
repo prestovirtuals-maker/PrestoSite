@@ -24,7 +24,7 @@
       a: "Administrative support comes in two packages, Get Started (10 hours, $395) and Get Organized (20 hours, $750). It covers appointment scheduling, editing and proofreading documents, PowerPoint decks, fillable forms and e-signatures, email and calendar management, data entry, travel booking, research, customer service, ordering supplies, invoicing and expense reconciliation. And more!",
       link: { label: 'See admin packages', href: 'index.html#packages' } },
     { re: /price|pricing|cost|rate|how much|fee|quote|afford/i,
-      a: "Administrative support comes in two packages: Get Started (10 hours of work, $395) and Get Organized (20 hours of work, $750, with a dedicated executive assistant). Social media plans are monthly: Starter $550, Level Up $950 and Media Boss $1,450 (CAD or USD), and a free 30-minute call is the quickest way to find the right fit.",
+      a: "Administrative support comes in two packages: Get Started (10 hours of work, $395) and Get Organized (20 hours of work, $750, with a dedicated executive assistant). Each is a one-time block of hours, and you can top up if your hours run out. Social media plans are monthly: Starter $550, Level Up $950 and Media Boss $1,450 (CAD or USD), and a free 30-minute call is the quickest way to find the right fit.",
       link: { label: 'See admin packages', href: 'index.html#packages' } },
     { re: /where|location|based|canada|canadian|\busa\b|u\.s\.?a?\b|united states|america|\bthe us\b|\bus (client|customer|business|compan|market|based)|\bin the us\b|toronto|mississauga|country|international|ontario/i,
       a: "We're based in Mississauga, Ontario and work remotely with business owners across Canada and the USA, during Eastern Time business hours (Mon to Fri, 9am to 5pm)." },
