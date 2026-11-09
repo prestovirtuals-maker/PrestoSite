@@ -329,3 +329,26 @@ footer a { color: #cfd8ff; }
 @media (prefers-reduced-motion: reduce) { .chat-fab { transition: none; } }
 
 @media (max-width: 560px) { .brand img { height: 46px; } .hero-art { max-width: 210px; } }
+
+
+/* ===== Packages ===== */
+.pkg-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; max-width: 960px; margin-inline: auto; align-items: stretch; }
+.card.pkg { position: relative; display: flex; flex-direction: column; padding: 2.2rem; }
+.pkg-tag { font-size: .75rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--blue); margin-bottom: .6rem; }
+.card.pkg h3 { font-size: 1.7rem; margin-bottom: .2rem; }
+.card.pkg .pkg-hrs { color: var(--muted); font-weight: 600; font-size: 1rem; margin: 0 0 .7rem; }
+.card.pkg .pkg-price { font-family: var(--font-display); font-size: 3.4rem; line-height: 1; color: var(--navy); margin: 0 0 1.6rem; font-weight: 600; }
+.card.pkg .checks { padding-top: 1.3rem; border-top: 1px solid rgba(10, 20, 80, .1); margin-bottom: 1.8rem; flex: 1; }
+.card.pkg .btn { align-self: flex-start; }
+.card.pkg.featured { background: linear-gradient(150deg, var(--navy), #14307f); border: 0; color: #dfe6ff; box-shadow: 0 18px 40px rgba(10, 20, 80, .22); }
+.card.pkg.featured h3, .card.pkg.featured .pkg-price { color: #fff; }
+.card.pkg.featured .pkg-hrs { color: #b8c4f5; }
+.card.pkg.featured .pkg-tag { color: var(--gold); }
+.card.pkg.featured .pkg-hrs { color: #b8c4f5; }
+.card.pkg.featured .checks { border-top-color: rgba(255, 255, 255, .18); }
+.card.pkg.featured .checks li { color: #fff; }
+.card.pkg.featured .checks svg { color: var(--gold); }
+.pkg-badge { position: absolute; top: 1.3rem; right: 1.3rem; background: var(--gold); color: #1a1405; font-weight: 800; font-size: .76rem; padding: .32rem .8rem; border-radius: 999px; }
+.card-link { display: inline-block; margin-top: 1.2rem; font-weight: 700; color: var(--blue); text-decoration: none; }
+.card-link:hover { text-decoration: underline; }
+@media (max-width: 760px) { .pkg-grid { grid-template-columns: 1fr; } .card.pkg { padding: 1.8rem; } }
