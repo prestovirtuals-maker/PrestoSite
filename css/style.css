@@ -419,4 +419,28 @@ footer a { color: #cfd8ff; }
 .svc-col .card.svc h3 { font-size: 1.9rem; }
 .svc-col .card.svc .icon { width: 64px; height: 64px; }
 .card.addon h3 { font-size: 1.45rem; }
-@media (min-width: 961px) { .card.pkg { min-height: 870px; } }
+@media (min-width: 961px) { .card.pkg { min-height: 890px; } }
+
+/* Clear green check / red X badges */
+.ic { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; color: #fff; flex: 0 0 22px; }
+.ic.yes { background: #16a34a; }
+.ic.no { background: #dc2626; }
+.pkg-list li .ic { margin-top: .1rem; }
+.pkg-list li.yes svg, .pkg-list li.no svg, .card.pkg.featured .pkg-list li.yes svg, .card.pkg.featured .pkg-list li.no svg { color: #fff; margin-top: 0; }
+
+/* Comparison tables */
+.cmp { max-width: 1120px; margin: 3.2rem auto 0; }
+.cmp-title { text-align: center; font-size: 1.9rem; margin: 0 0 1.4rem; }
+.cmp-scroll { overflow-x: auto; border-radius: var(--radius); box-shadow: var(--shadow); background: #fff; }
+.cmp-table { width: 100%; min-width: 720px; border-collapse: collapse; font-size: .98rem; }
+.cmp-table thead th { background: var(--navy); color: #fff; font-family: var(--font-display); font-size: 1.2rem; padding: 1.1rem .8rem; text-align: center; }
+.cmp-table thead th.hl { background: var(--blue); }
+.cmp-table tbody th[scope="row"] { text-align: left; font-weight: 600; color: var(--navy); padding: .85rem 1.2rem; width: 34%; }
+.cmp-table td { text-align: center; padding: .85rem .8rem; border-top: 1px solid rgba(10, 20, 80, .08); }
+.cmp-table tbody tr th[scope="row"] { border-top: 1px solid rgba(10, 20, 80, .08); }
+.cmp-table td.hl { background: rgba(0, 68, 170, .06); }
+.cmp-table td.txt { font-weight: 700; color: var(--navy); }
+.cmp-table tr.sep th { background: var(--mist); color: var(--blue); font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; text-align: left; padding: .6rem 1.2rem; }
+.cmp-table tr.whyrow td, .cmp-table tr.whyrow th { background: #fff8e6; border-top: 2px solid var(--gold); vertical-align: top; }
+.cmp-table tr.whyrow td.why { text-align: left; font-size: .92rem; color: var(--navy); line-height: 1.5; padding: 1rem .9rem; }
+@media (max-width: 760px) { .cmp-title { font-size: 1.5rem; } }
