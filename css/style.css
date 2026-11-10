@@ -419,7 +419,6 @@ footer a { color: #cfd8ff; }
 .svc-col .card.svc h3 { font-size: 1.9rem; }
 .svc-col .card.svc .icon { width: 64px; height: 64px; }
 .card.addon h3 { font-size: 1.45rem; }
-@media (min-width: 961px) { .card.pkg { min-height: 890px; } }
 
 /* Clear green check / red X badges */
 .ic { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; color: #fff; flex: 0 0 22px; }
@@ -453,3 +452,20 @@ footer a { color: #cfd8ff; }
 .cmp-table td .ic { vertical-align: middle; }
 .cmp-table tbody th[scope="row"] { vertical-align: middle; }
 .cmp-table tr.whyrow td.why { text-align: center; }
+
+/* Admin services: grouped detail lists */
+.svc-sub { margin: 1.3rem 0 .4rem; font-size: .76rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--blue); }
+.svc-detail li span { display: block; }
+.svc-detail li b { display: block; font-weight: 700; color: var(--navy); }
+.svc-detail li small { display: block; font-size: .85rem; color: var(--muted); line-height: 1.45; margin-top: .1rem; }
+.cmp-table td.txt { font-size: .9rem; }
+
+/* Executive-level admin row */
+.ops-wrap { max-width: 1120px; margin: 3.2rem auto 0; }
+.ops-title { text-align: center; font-size: 1.9rem; margin: 0 0 1.4rem; }
+.ops-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+.card.ops { padding: 1.8rem; }
+.card.ops h3 { font-size: 1.25rem; margin: 0 0 1rem; color: var(--blue); }
+.card.ops .checks { border-top: 0; padding-top: 0; }
+.card.ops .svc-detail li { margin-bottom: .9rem; }
+@media (max-width: 900px) { .ops-row { grid-template-columns: 1fr; } }
