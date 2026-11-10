@@ -444,3 +444,12 @@ footer a { color: #cfd8ff; }
 .cmp-table tr.whyrow td, .cmp-table tr.whyrow th { background: #fff8e6; border-top: 2px solid var(--gold); vertical-align: top; }
 .cmp-table tr.whyrow td.why { text-align: left; font-size: .92rem; color: var(--navy); line-height: 1.5; padding: 1rem .9rem; }
 @media (max-width: 760px) { .cmp-title { font-size: 1.5rem; } }
+
+/* Simpler, centred comparison tables */
+.cmp-table { table-layout: fixed; min-width: 640px; }
+.cmp-table col.c0 { width: 34%; }
+.cmp-table thead th { text-align: center; vertical-align: middle; }
+.cmp-table td, .cmp-table td.c { text-align: center; vertical-align: middle; }
+.cmp-table td .ic { vertical-align: middle; }
+.cmp-table tbody th[scope="row"] { vertical-align: middle; }
+.cmp-table tr.whyrow td.why { text-align: center; }
