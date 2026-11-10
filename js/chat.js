@@ -5,7 +5,7 @@
   var cfg = window.PRESTO_CHAT || {};
   var BOOK = cfg.bookingUrl || 'https://calendly.com/presto_virtual/30min';
   var OWNER = cfg.ownerEmail || 'prestovirtuals@gmail.com';
-  var ENDPOINT = cfg.endpoint || '';
+  var ENDPOINT = cfg.endpoint || 'https://script.google.com/macros/s/AKfycbzFBdW5XT7DHqRps-dBhTnp06ClnCXE-CSQEnAHT0dDVDfWZQxm8P1aRvde7o9rHebH/exec';
   var SALE_END = new Date('2026-11-28T00:00:00-05:00').getTime();
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
@@ -21,10 +21,10 @@
       a: "Tech tasks cover website creation and management and landing pages. Add-ons include domain registration and hosting advice, e-commerce and SEO-optimized sites, logos, custom email, ongoing maintenance, Etsy and Printful shop setup, and product catalogues.",
       link: { label: 'See tech tasks', href: 'index.html#services' } },
     { re: /get started|get organized|package|admin|email|calendar|schedul|travel|data entry|invoice|expense|powerpoint|ppt|document|form\b|survey|e-?sign|research|supplies|customer service/i,
-      a: "Administrative support comes in two packages, Get Started (10 hours, $395) and Get Organized (20 hours, $750). It covers appointment scheduling, editing and proofreading documents, PowerPoint decks, fillable forms and e-signatures, email and calendar management, data entry, travel booking, research, customer service, ordering supplies, invoicing and expense reconciliation. And more!",
+      a: "Administrative support comes in three monthly packages: Get Started (40 hours, $1,400), Get Organized (80 hours, $2,600) and Executive (120 hours, $3,600). It covers appointment scheduling, editing and proofreading documents, PowerPoint decks, fillable forms and e-signatures, email and calendar management, data entry, travel booking, research, customer service, ordering supplies, invoicing and expense reconciliation. And more!",
       link: { label: 'See admin packages', href: 'index.html#packages' } },
     { re: /price|pricing|cost|rate|how much|fee|quote|afford/i,
-      a: "Administrative support comes in two packages: Get Started (10 hours of work, $395) and Get Organized (20 hours of work, $750, with a dedicated executive assistant). Each is a one-time block of hours, and you can top up if your hours run out. Social media plans are monthly: Starter $550, Level Up $950 and Media Boss $1,450 (CAD or USD), and a free 30-minute call is the quickest way to find the right fit.",
+      a: "Administrative support comes in three monthly packages: Get Started (40 hours a month, $1,400), Get Organized (80 hours a month, $2,600, with a dedicated executive assistant) and Executive (120 hours a month, $3,600). Social media plans are monthly: Starter $550, Level Up $950 and Media Boss $1,450 (CAD or USD), and a free 30-minute call is the quickest way to find the right fit.",
       link: { label: 'See admin packages', href: 'index.html#packages' } },
     { re: /where|location|based|canada|canadian|\busa\b|u\.s\.?a?\b|united states|america|\bthe us\b|\bus (client|customer|business|compan|market|based)|\bin the us\b|toronto|mississauga|country|international|ontario/i,
       a: "We're based in Mississauga, Ontario and work remotely with business owners across Canada and the USA, during Eastern Time business hours (Mon to Fri, 9am to 5pm)." },
@@ -38,7 +38,7 @@
     { re: /confiden|nda|privacy|secure|security|trust/i,
       a: "Confidentiality is a top priority, and an NDA can be signed on request." },
     { re: /contract|commit|cancel|long.?term/i,
-      a: "Details depend on the plan you choose, and you get a proposal and agreement after your free call. Our sale hours are banked with no long contracts and are valid for 60 days." },
+      a: "Details depend on the plan you choose, and you get a proposal and agreement after your free call. Our admin sale hours are banked with no long contracts and are valid for 60 days." },
     { re: /thank|thanks|great|awesome|perfect|ok(ay)?$/i,
       a: "You're welcome! Anything else I can help with?" }
   ];
@@ -156,7 +156,7 @@
     if (Date.now() >= SALE_END) {
       return ["Our Black Friday sale has ended. Message us or book a free call to hear about our current plans.", { label: 'Book a free call', href: BOOK, ext: true }];
     }
-    return ["Black Friday Early Bird: buy 15 hours, get 5 FREE. The Admin Bank is 20 hours for $525 and the Social Bank is 20 hours for $675. Hours are valid for 60 days, with no long contracts. It's limited to the first 10 businesses and ends at midnight on November 27, 2026 (ET).",
+    return ["Black Friday Early Bird: buy 15 admin hours and get 5 FREE, so the Admin Bank is 20 hours for $525 (regular $700). For social media, the Starter plan is 25% off your first month: $412.50 instead of $550. Admin hours are valid for 60 days, with no long contracts. It's limited to the first 10 businesses and ends at midnight on November 27, 2026 (ET).",
             { label: 'See sale details', href: 'black-friday.html' }];
   }
 
