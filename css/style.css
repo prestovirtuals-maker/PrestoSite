@@ -385,3 +385,6 @@ footer a { color: #cfd8ff; }
 .hero-badge:hover { animation-play-state: paused; background: var(--navy); color: #fff; box-shadow: 0 12px 28px rgba(10, 20, 80, .3); }
 .hero-badge:hover i { background: var(--gold); transform: scale(1.5); }
 @media (prefers-reduced-motion: reduce) { .hero-badge.b1, .hero-badge.b2 { animation: none; } }
+
+/* Equal-size package cards across both rows */
+@media (min-width: 961px) { .card.pkg { min-height: 790px; } }

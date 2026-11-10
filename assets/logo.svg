@@ -1,10 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 854" role="img" aria-label="Presto Virtuals logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-70 0 1070 854" role="img" aria-label="Presto Virtuals logo">
+  <style>
+    .trail { transform-box: fill-box; transform-origin: center; animation: trail 3.4s ease-in-out infinite; }
+    .t1 { animation-delay: 0s; } .t2 { animation-delay: .25s; } .t3 { animation-delay: .5s; } .t4 { animation-delay: .75s; }
+    .arrow { animation: go 3.4s cubic-bezier(.4,0,.2,1) infinite; }
+    .swoosh { transform-box: fill-box; transform-origin: right center; animation: swoosh 3.4s ease-in-out infinite; }
+    .whole { animation: enter 1.1s cubic-bezier(.2,.8,.2,1) both; }
+    @keyframes trail { 0%,100% { transform: translateX(0); opacity: 1; } 45% { transform: translateX(-34px); opacity: .25; } 60% { transform: translateX(-34px); opacity: .25; } 85% { transform: translateX(0); opacity: 1; } }
+    @keyframes go { 0%,100% { transform: translate(0,0); } 40% { transform: translate(34px,-12px); } 55% { transform: translate(34px,-12px); } 85% { transform: translate(0,0); } }
+    @keyframes swoosh { 0%,100% { transform: scaleX(1); } 45%,60% { transform: scaleX(1.06); } }
+    @keyframes enter { from { transform: translateX(-60px); opacity: 0; } to { transform: none; opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) { .trail,.arrow,.swoosh,.whole { animation: none; } }
+  </style>
+  <g class="whole">
   <path fill="#0044aa" d="M345 14H760C890 14 972 120 972 280C972 440 872 570 705 570H470L432 838H300L332 560C455 545 535 515 600 480H645C770 480 850 410 850 300C850 205 790 126 700 126H548L512 322C470 358 412 388 352 408L352 374C354 360 346 356 330 357H282C260 357 248 338 248 322C248 305 262 290 282 290H340C362 290 376 275 376 252C376 232 365 217 340 217H235C215 217 205 200 205 184C205 166 218 152 238 152H350C380 152 396 135 396 112C396 92 385 80 360 80H345C328 80 318 64 318 47C318 30 328 14 345 14Z"/>
-  <path fill="#0044aa" d="M42 432C160 490 330 482 470 402C560 352 680 270 760 215L712 398L672 355C610 410 540 450 470 488C380 528 270 538 190 522C120 508 80 470 42 432Z"/>
-  <path fill="#0a1450" d="M578 240L745 203L757 211C700 280 600 370 490 428C455 446 425 456 402 452L400 442C418 424 440 412 470 400C525 372 575 332 600 290Z"/>
-  <circle cx="250" cy="45" r="32" fill="#0044aa"/>
-  <circle cx="138" cy="185" r="32" fill="#0044aa"/>
-  <circle cx="47" cy="322" r="32" fill="#0044aa"/>
-  <rect x="118" y="290" width="98" height="67" rx="33.5" fill="#0044aa"/>
-  <circle cx="232" cy="592" r="32" fill="#0044aa"/>
+  <path class="swoosh" fill="#0044aa" d="M42 432C160 490 330 482 470 402C560 352 680 270 760 215L712 398L672 355C610 410 540 450 470 488C380 528 270 538 190 522C120 508 80 470 42 432Z"/>
+  <path class="arrow" fill="#0a1450" d="M578 240L745 203L757 211C700 280 600 370 490 428C455 446 425 456 402 452L400 442C418 424 440 412 470 400C525 372 575 332 600 290Z"/>
+  <circle class="trail t1" cx="250" cy="45" r="32" fill="#0044aa"/>
+  <circle class="trail t2" cx="138" cy="185" r="32" fill="#0044aa"/>
+  <circle class="trail t3" cx="47" cy="322" r="32" fill="#0044aa"/>
+  <rect class="trail t2" x="118" y="290" width="98" height="67" rx="33.5" fill="#0044aa"/>
+  <circle class="trail t4" cx="232" cy="592" r="32" fill="#0044aa"/>
+  </g>
 </svg>
