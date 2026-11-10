@@ -87,7 +87,7 @@ p { margin: 0 0 1em; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: .9rem; }
 .hero-art { position: relative; display: flex; flex-direction: column; align-items: center; gap: 1.6rem; }
 .hero-art img { position: relative; width: min(400px, 90%); height: auto; }
-.hero-art .hero-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: .8rem; }
+.hero-art .hero-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: .9rem 2.6rem; padding: 0 .6rem 1rem; }
 .hero-badge {
   background: #fff; border-radius: 14px; padding: .7rem 1rem; box-shadow: var(--shadow);
   font-size: .85rem; font-weight: 700; color: var(--navy); display: flex; align-items: center; gap: .5rem;
@@ -374,3 +374,14 @@ footer a { color: #cfd8ff; }
 .both-box .both-was { margin: .3rem 0 1rem; color: #b8c4f5; }
 .both-box .both-note { max-width: 40rem; margin: 0 auto 1.4rem; color: #dfe6ff; }
 @media (max-width: 560px) { .both-box { padding: 1.6rem 1.2rem; } }
+
+/* Hero badges: slow drift + hover reaction */
+@keyframes badge-drift-a { 0%,100% { transform: translate(0,0) rotate(-1deg); } 25% { transform: translate(8px,-8px) rotate(1deg); } 50% { transform: translate(12px,2px) rotate(-.5deg); } 75% { transform: translate(6px,9px) rotate(1deg); } }
+@keyframes badge-drift-b { 0%,100% { transform: translate(0,0) rotate(1deg); } 25% { transform: translate(-8px,7px) rotate(-1deg); } 50% { transform: translate(-12px,-4px) rotate(.5deg); } 75% { transform: translate(-5px,-9px) rotate(-1deg); } }
+.hero-badge { cursor: default; transition: background .3s, color .3s, box-shadow .3s, border-color .3s; will-change: transform; }
+.hero-badge.b1 { animation: badge-drift-a 11s ease-in-out infinite; }
+.hero-badge.b2 { animation: badge-drift-b 13s ease-in-out infinite; }
+.hero-badge i { transition: background .3s, transform .3s; }
+.hero-badge:hover { animation-play-state: paused; background: var(--navy); color: #fff; box-shadow: 0 12px 28px rgba(10, 20, 80, .3); }
+.hero-badge:hover i { background: var(--gold); transform: scale(1.5); }
+@media (prefers-reduced-motion: reduce) { .hero-badge.b1, .hero-badge.b2 { animation: none; } }
