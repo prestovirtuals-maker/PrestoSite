@@ -484,7 +484,11 @@ h1, h2, h3, h4, .pkg-price { font-variant-ligatures: none; font-feature-settings
 .foot-review { display: inline-flex; align-items: center; gap: .4rem; font-weight: 700; color: var(--gold); }
 
 /* testimonials */
-.tm-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.4rem; margin-top: 2rem; }
+.tm-grid { column-count: 3; column-gap: 1.4rem; margin-top: 2rem; }
+.tm-grid .tm-card { break-inside: avoid; margin: 0 0 1.4rem; }
+.tm-card figcaption span { display: block; font-weight: 600; color: var(--muted); font-size: .85rem; }
+@media (max-width: 960px) { .tm-grid { column-count: 2; } }
+@media (max-width: 620px) { .tm-grid { column-count: 1; } }
 .tm-card { margin: 0; }
 .tm-card blockquote { margin: 0 0 1rem; font-size: 1.02rem; line-height: 1.6; }
 .tm-card figcaption { font-weight: 800; color: var(--navy); font-size: .92rem; }
