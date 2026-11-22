@@ -32,22 +32,33 @@
   /* ---- Sale promo bar + countdown ---- */
   var bar = document.getElementById('promo-bar');
 
-  /* Cyber Week takes over the promo bar from Nov 29 (home page only).
-     Black Friday bar ends at midnight Nov 27; Cyber Week ends at midnight Dec 4. */
+  /* Promo bar phases (home page only). Default bar = Black Friday, ends midnight Nov 27.
+     Later phases swap the message by date (Toronto time). Outside every phase the expired default bar stays hidden. */
   var promoKey = 'promoClosed';
+  var PROMO_PHASES = [
+    { start: '2026-11-29T00:00:00-05:00', end: '2026-12-05T00:00:00-05:00', key: 'promoClosedCyber', label: 'Cyber Week sale',
+      html: '<strong>Cyber Week Sale:</strong> Admin: buy 15 hours, get 5 FREE &middot; 20 hours for $525 <span class="promo-count" id="promo-count"></span>',
+      href: '#packages', cta: 'See admin packages &darr;' },
+    { start: '2026-12-07T00:00:00-05:00', end: '2026-12-12T00:00:00-05:00', key: 'promoClosedYearEnd', label: 'Year-end sale',
+      html: '<strong>Year-End Sale:</strong> Admin: buy 15 hours, get 5 FREE &middot; 20 hours for $525 <span class="promo-count" id="promo-count"></span>',
+      href: '#packages', cta: 'See admin packages &darr;' },
+    { start: '2026-12-14T00:00:00-05:00', end: '2026-12-19T00:00:00-05:00', key: 'promoClosedRescue', label: 'CEO Holiday Rescue deal',
+      html: '<strong>CEO Holiday Rescue:</strong> 10 hours of premium VA support for $399 flat &middot; limited spots <span class="promo-count" id="promo-count"></span>',
+      href: '#contact', cta: 'Claim your spot &darr;' }
+  ];
   if (bar && bar.hasAttribute('data-cyber')) {
-    var now = Date.now();
-    var cyberStart = new Date('2026-11-29T00:00:00-05:00').getTime();
-    var cyberEnd = new Date('2026-12-05T00:00:00-05:00').getTime();
-    if (now >= cyberStart && now < cyberEnd) {
-      bar.setAttribute('data-sale-end', '2026-12-05T00:00:00-05:00');
-      bar.setAttribute('aria-label', 'Cyber Week sale');
-      var msg = bar.querySelector('.promo-inner p');
-      if (msg) msg.innerHTML = '<strong>Cyber Week Sale:</strong> Admin: buy 15 hours, get 5 FREE &middot; 20 hours for $525 <span class="promo-count" id="promo-count"></span>';
-      var lnk = bar.querySelector('.promo-link');
-      if (lnk) { lnk.setAttribute('href', '#packages'); lnk.innerHTML = 'See admin packages &darr;'; }
-      promoKey = 'promoClosedCyber';
-    }
+    var nowT = Date.now();
+    PROMO_PHASES.forEach(function (ph) {
+      if (nowT >= new Date(ph.start).getTime() && nowT < new Date(ph.end).getTime()) {
+        bar.setAttribute('data-sale-end', ph.end);
+        bar.setAttribute('aria-label', ph.label);
+        var msg = bar.querySelector('.promo-inner p');
+        if (msg) msg.innerHTML = ph.html;
+        var lnk = bar.querySelector('.promo-link');
+        if (lnk) { lnk.setAttribute('href', ph.href); lnk.innerHTML = ph.cta; }
+        promoKey = ph.key;
+      }
+    });
   }
   var endAttr = (bar && bar.getAttribute('data-sale-end')) || (document.querySelector('[data-sale-end]') || {}).getAttribute && document.querySelector('[data-sale-end]').getAttribute('data-sale-end');
   var end = endAttr ? new Date(endAttr).getTime() : 0;
