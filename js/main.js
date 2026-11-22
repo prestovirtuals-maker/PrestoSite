@@ -43,7 +43,7 @@
       html: '<strong>Year-End Sale:</strong> Admin: buy 15 hours, get 5 FREE &middot; 20 hours for $525 <span class="promo-count" id="promo-count"></span>',
       href: '#packages', cta: 'See admin packages &darr;' },
     { start: '2026-12-14T00:00:00-05:00', end: '2026-12-19T00:00:00-05:00', key: 'promoClosedRescue', label: 'CEO Holiday Rescue deal',
-      html: '<strong>CEO Holiday Rescue:</strong> 10 hours of premium VA support for $399 flat &middot; limited spots <span class="promo-count" id="promo-count"></span>',
+      html: '<strong>CEO Holiday Rescue:</strong> 10 hours of VA support + executive perks for $399 flat &middot; limited spots <span class="promo-count" id="promo-count"></span>',
       href: '#contact', cta: 'Claim your spot &darr;' }
   ];
   if (bar && bar.hasAttribute('data-cyber')) {
