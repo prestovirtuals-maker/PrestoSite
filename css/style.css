@@ -494,3 +494,11 @@ h1, h2, h3, h4, .pkg-price { font-variant-ligatures: none; font-feature-settings
 .tm-card figcaption { font-weight: 800; color: var(--navy); font-size: .92rem; }
 .tm-stars { color: #e0b95a; letter-spacing: .15em; margin-bottom: .6rem; }
 .tm-cta { text-align: center; margin-top: 2rem; }
+
+/* Nav: keep 6 links + button on one line on narrow desktops/tablets */
+.nav-links a { white-space: nowrap; }
+@media (min-width: 761px) and (max-width: 1100px) {
+  .nav-links { gap: 1rem; }
+  .nav-links a { font-size: .88rem; }
+  .nav-links a.btn-sm { padding-left: 1rem; padding-right: 1rem; }
+}
