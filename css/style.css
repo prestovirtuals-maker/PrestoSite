@@ -502,3 +502,11 @@ h1, h2, h3, h4, .pkg-price { font-variant-ligatures: none; font-feature-settings
   .nav-links a { font-size: .88rem; }
   .nav-links a.btn-sm { padding-left: 1rem; padding-right: 1rem; }
 }
+
+/* Admin packages: 5-tier layout (two smaller plans, then three ongoing plans) */
+.pkg-row-label { text-align: center; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; font-size: .8rem; color: var(--blue); margin: 2.2rem 0 1.1rem; }
+.pkg-topup { font-size: .92rem; color: var(--muted); margin: -.6rem 0 1.4rem; padding: .7rem .9rem; border-radius: 10px; background: rgba(224, 185, 90, .16); }
+.pkg-grid:not(.three) { max-width: 780px; }
+.cmp-table { min-width: 880px; }
+.cmp-table col.c0 { width: 22%; }
+@media (max-width: 760px) { .pkg-row-label { margin-top: 1.6rem; } }
