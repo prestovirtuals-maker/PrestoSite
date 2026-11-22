@@ -51,7 +51,11 @@
       href: '#social-packages', cta: 'See social plans &darr;' },
     { start: '2026-12-14T00:00:00-05:00', end: '2026-12-19T00:00:00-05:00', key: 'promoClosedRescue', label: 'CEO Holiday Rescue deal',
       html: '<strong>CEO Holiday Rescue:</strong> 10 hours of VA support + executive perks for $399 flat &middot; limited spots <span class="promo-count" id="promo-count"></span>',
-      href: '#contact', cta: 'Claim your spot &darr;' }
+      href: '#contact', cta: 'Claim your spot &darr;' },
+    /* Dec 19 - Dec 31: social media offer returns to the bar (ends Dec 31 at midnight) */
+    { start: '2026-12-19T00:00:00-05:00', end: '2027-01-01T00:00:00-05:00', key: 'promoClosedSocialLate', label: 'Social media sale',
+      html: '<strong>Social Media Sale:</strong> $100 off your first month of the Starter plan ($450, reg. $550) <span class="promo-count" id="promo-count"></span>',
+      href: '#social-packages', cta: 'See social plans &darr;' }
   ];
   if (bar && bar.hasAttribute('data-cyber')) {
     var nowT = Date.now();
@@ -67,6 +71,12 @@
       }
     });
   }
+  /* Elements with data-offer-start / data-offer-end are only shown inside that window */
+  document.querySelectorAll('[data-offer-end]').forEach(function (el) {
+    var t = Date.now(), st = el.getAttribute('data-offer-start'), en = el.getAttribute('data-offer-end');
+    var on = (!st || t >= new Date(st).getTime()) && (!en || t < new Date(en).getTime());
+    el.hidden = !on;
+  });
   var endAttr = (bar && bar.getAttribute('data-sale-end')) || (document.querySelector('[data-sale-end]') || {}).getAttribute && document.querySelector('[data-sale-end]').getAttribute('data-sale-end');
   var end = endAttr ? new Date(endAttr).getTime() : 0;
 

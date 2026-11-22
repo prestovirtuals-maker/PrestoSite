@@ -510,3 +510,7 @@ h1, h2, h3, h4, .pkg-price { font-variant-ligatures: none; font-feature-settings
 .cmp-table { min-width: 880px; }
 .cmp-table col.c0 { width: 22%; }
 @media (max-width: 760px) { .pkg-row-label { margin-top: 1.6rem; } }
+
+/* Date-windowed offer note on a package card */
+.pkg-offer { font-size: .92rem; color: var(--navy); margin: -.4rem 0 1.2rem; padding: .7rem .9rem; border-radius: 10px; background: rgba(224, 185, 90, .22); border: 1px solid rgba(224, 185, 90, .55); }
+.pkg-offer[hidden] { display: none; }
