@@ -39,7 +39,7 @@
     { start: '2026-11-29T00:00:00-05:00', end: '2026-12-05T00:00:00-05:00', key: 'promoClosedCyber', label: 'Cyber Week sale',
       html: '<strong>Cyber Week Sale:</strong> Admin: buy 15 hours, get 5 FREE &middot; 20 hours for $525 <span class="promo-count" id="promo-count"></span>',
       href: '#packages', cta: 'See admin packages &darr;' },
-    { start: '2026-12-07T00:00:00-05:00', end: '2026-12-12T00:00:00-05:00', key: 'promoClosedYearEnd', label: 'Year-end sale',
+    { start: '2026-12-07T00:00:00-05:00', end: '2026-12-14T00:00:00-05:00', key: 'promoClosedYearEnd', label: 'Year-end sale',
       html: '<strong>Year-End Sale:</strong> Admin: buy 15 hours, get 5 FREE &middot; 20 hours for $525 <span class="promo-count" id="promo-count"></span>',
       href: '#packages', cta: 'See admin packages &darr;' },
     /* Dec 8 and Dec 10: social media offer (later phases override the year-end phase above). Offer itself runs to Dec 31. */
