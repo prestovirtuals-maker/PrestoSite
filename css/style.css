@@ -514,3 +514,28 @@ h1, h2, h3, h4, .pkg-price { font-variant-ligatures: none; font-feature-settings
 /* Date-windowed offer note on a package card */
 .pkg-offer { font-size: .92rem; color: var(--navy); margin: -.4rem 0 1.2rem; padding: .7rem .9rem; border-radius: 10px; background: rgba(224, 185, 90, .22); border: 1px solid rgba(224, 185, 90, .55); }
 .pkg-offer[hidden] { display: none; }
+
+/* Mission & values */
+.mv-wrap { margin-top: 3.2rem; }
+.mv-mission { background: linear-gradient(135deg, var(--navy), #14246e); color: #fff; border-radius: 22px; padding: 2.2rem 2.4rem; text-align: center; box-shadow: 0 18px 44px rgba(10, 20, 80, .18); }
+.mv-mission .eyebrow { color: var(--gold); }
+.mv-mission p { font-family: var(--font-head); font-size: clamp(1.25rem, 2.4vw, 1.7rem); line-height: 1.4; margin: .6rem auto 0; max-width: 46ch; }
+.mv-title { text-align: center; margin: 2.4rem 0 1.2rem; }
+.mv-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.1rem; }
+.mv-card { flex: 1 1 220px; max-width: 320px; }
+@media (min-width: 1100px) { .mv-card { flex: 1 1 0; max-width: none; } }
+.mv-card { background: #fff; border: 1px solid rgba(10, 20, 80, .1); border-radius: 16px; padding: 1.3rem 1.2rem; box-shadow: 0 8px 24px rgba(10, 20, 80, .06); }
+.mv-card h4 { margin: 0 0 .4rem; font-family: var(--font-head); color: var(--navy); font-size: 1.12rem; }
+.mv-card h4::before { content: ""; display: block; width: 30px; height: 4px; border-radius: 4px; background: var(--gold); margin-bottom: .7rem; }
+.mv-card p { margin: 0; color: var(--muted); font-size: .96rem; line-height: 1.55; }
+
+/* Cookie notice */
+.cookie-note { position: fixed; left: 18px; bottom: 18px; z-index: 80; max-width: 440px; background: var(--navy); color: #fff; border-radius: 16px; padding: 1rem 1.15rem; box-shadow: 0 14px 38px rgba(10, 20, 80, .35); font-size: .92rem; line-height: 1.5; }
+.cookie-note[hidden] { display: none; }
+.cookie-note p { margin: 0 0 .75rem; }
+.cookie-note a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; font-weight: 700; }
+.cookie-actions { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.cookie-actions .btn { padding: .55rem 1.2rem; font-size: .92rem; }
+.cookie-status { margin: 0; }
+.foot a[data-cookie-settings] { cursor: pointer; }
+@media (max-width: 760px) { .cookie-note { left: 12px; right: 12px; bottom: 84px; max-width: none; } }
