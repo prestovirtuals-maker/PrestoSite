@@ -4,7 +4,7 @@
   'use strict';
   var cfg = window.PRESTO_CHAT || {};
   var BOOK = cfg.bookingUrl || 'https://calendly.com/presto_virtual/30min';
-  var OWNER = cfg.ownerEmail || 'prestovirtuals@gmail.com';
+  var OWNER = cfg.ownerEmail || 'info@prestovirtuals.ca';
   var ENDPOINT = cfg.endpoint || 'https://script.google.com/macros/s/AKfycbzFBdW5XT7DHqRps-dBhTnp06ClnCXE-CSQEnAHT0dDVDfWZQxm8P1aRvde7o9rHebH/exec';
   var SALE_END = new Date('2026-11-28T00:00:00-05:00').getTime();
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
