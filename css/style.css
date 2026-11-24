@@ -539,3 +539,13 @@ h1, h2, h3, h4, .pkg-price { font-variant-ligatures: none; font-feature-settings
 .cookie-status { margin: 0; }
 .foot a[data-cookie-settings] { cursor: pointer; }
 @media (max-width: 760px) { .cookie-note { left: 12px; right: 12px; bottom: 84px; max-width: none; } }
+
+/* Legal / policy pages */
+.legal { max-width: 780px; }
+.legal h1 { font-family: var(--font-head); color: var(--navy); font-size: clamp(2rem, 4vw, 2.8rem); margin: 0 0 .3rem; }
+.legal-date { color: var(--muted); margin: 0 0 2rem; font-weight: 600; }
+.legal h2 { font-family: var(--font-head); color: var(--navy); font-size: 1.35rem; margin: 2.1rem 0 .55rem; }
+.legal p, .legal li { line-height: 1.7; color: var(--ink, #1c2340); }
+.legal ul { padding-left: 1.2rem; }
+.legal li { margin: .35rem 0; }
+.legal a { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
