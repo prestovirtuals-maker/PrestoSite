@@ -576,3 +576,10 @@ h1, h2, h3, h4, .pkg-price { font-variant-ligatures: none; font-feature-settings
 .alt-band { background: #eef2f4; }
 #admin.band, #social.band { padding-top: 2.5rem; padding-bottom: 2.5rem; }
 .pg-title + p { margin-bottom: 0; }
+
+/* Comparison tables: monthly price in headings, booking buttons in footer */
+.cmp-table thead th .cmp-price { display: block; margin-top: .25rem; font-family: var(--font-body, inherit); font-size: 1.05rem; font-weight: 800; color: var(--gold); }
+.cmp-table thead th .cmp-price small { font-size: .75rem; font-weight: 600; color: rgba(255,255,255,.8); }
+.cmp-table tfoot td, .cmp-table tfoot th { padding: 1rem .6rem; text-align: center; background: transparent; }
+.cmp-table tfoot td.hl { background: #eef3fb; }
+.cmp-table tfoot .btn { white-space: nowrap; }
