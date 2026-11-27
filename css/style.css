@@ -583,3 +583,7 @@ h1, h2, h3, h4, .pkg-price { font-variant-ligatures: none; font-feature-settings
 .cmp-table tfoot td, .cmp-table tfoot th { padding: 1rem .6rem; text-align: center; background: transparent; }
 .cmp-table tfoot td.hl { background: #eef3fb; }
 .cmp-table tfoot .btn { white-space: nowrap; }
+.cmp-table thead th .cmp-offer { display: block; margin: .5rem auto 0; max-width: 11rem; padding: .35rem .5rem; border-radius: 10px; background: var(--gold); color: var(--navy); font-family: var(--font-body, inherit); font-size: .8rem; font-weight: 800; line-height: 1.25; }
+.cmp-table thead th .cmp-offer[hidden] { display: none; }
+.cmp-table thead th .cmp-offer small { display: block; font-size: .7rem; font-weight: 700; opacity: .85; }
+.cmp-table thead th { vertical-align: top; }
